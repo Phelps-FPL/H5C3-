@@ -1,6 +1,8 @@
+/* 头部样式 */
 .header{
     background-color: #f7f7f7;
 }
+/* 头部logo样式 */
 .header__wrap{
     width: 1200px;
     height: 80px;
@@ -20,3 +22,25 @@
     left: 20px;
     margin-top: -19px;
 }
+/* 头部导航栏样式 */
+.header__nav{
+    position: absolute;
+    right: 20px;
+    height: 38px;
+    line-height: 38px;
+    top: 50%;
+    margin-top: -19px;
+}
+.header__nav-item{
+    color: #292f35;
+    font-size: 14px;
+    display: block;
+    line-height: 38px;
+    float: left;
+    margin-left: 20px;
+
+}
+.header__nav-item_status_active {
+
+}
+.header__nav-item_status_button {
