@@ -7,6 +7,7 @@
     width: 1200px;
     height: 80px;
     position: relative;
+    margin: auto 0;
 }
 .header__logo{
     width: 150px;
@@ -38,9 +39,29 @@
     line-height: 38px;
     float: left;
     margin-left: 20px;
+    position: relative;
 
+}
+.header__nav-item:hover{
+    color:#f01400;
 }
 .header__nav-item_status_active {
-
+    color:#f01400;
+}
+.header__nav-item_status_active::after{
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #f01400;
 }
 .header__nav-item_status_button {
+    background: #000;
+    color: #f4f4f5;
+    text-align: center;
+    width: 90px;
+    border-radius: 3px;
+}
