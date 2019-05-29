@@ -4,7 +4,7 @@
 }
 /* 头部logo样式 */
 .header__wrap{
-    width: 1200px;
+    width: 1500px;
     height: 80px;
     position: relative;
     margin: auto 0;
@@ -64,4 +64,86 @@
     text-align: center;
     width: 90px;
     border-radius: 3px;
+}
+/* 第一屏 */
+.screen-1{
+    height: 800px;
+    background-color: #e7e7e7;
+    position: relative;
+    overflow: hidden;
+    background: url('../img/bg-screen-1.png') no-repeat center;
+    background-size: cover;
+}
+.screen-1__heading{
+    font-weight: normal;
+    text-align: center;
+    color: #4d555d;
+    padding-top: 152px;
+}
+.screen-1__heading b{
+    color: #f01400;
+    font-weight: normal;
+}
+.screen-1__phone{
+    width: 1375px;
+    height: 305px;
+    background: url('../img/screen-1-phone.png') no-repeat center;
+    position: absolute;
+    left: 50%;
+    margin-left: -687px;
+    bottom: 220px;
+    z-index: 2;
+}
+.screen-1__shadow{
+    width: 1233px;
+    height: 411px;
+    background: url('../img/screen-1-shadow.png') no-repeat center;
+    position: absolute;
+    left: 50%;
+    margin-left: -616px;
+    bottom: 30px;
+    opacity: 0.8;
+    z-index: 1;
+}
+/* 第二屏 */
+.screen-2{
+    background: #fafafa;
+    height: 800px;
+}
+.screen-2__heading{
+    font-weight: normal;
+    text-align: center;
+    color: #f01400;
+    padding-top: 96px;
+    font-style: 46px;
+}
+.screen-2__subheading{
+    font-weight: normal;
+    text-align: center;
+    color: #f01400;
+    padding-top: 25px;
+    font-style: 46px;
+}
+.screen-2__phone{
+    width: 928px;
+    height: 873px;
+    background: url('../img/bg-screen-2.png') no-repeat center;
+    position: absolute;
+    left: 50%;
+    margin-left: -464px;
+    bottom: 0;
+    z-index: 2;
+}
+.screen__point{
+    width: 108px;
+    padding-right: 112px;
+    height: 22px;
+    font-size: 22px;
+    line-height: 22px;
+    color:#4d555d;
+    background: url('../img/icon-point-right.png') no-repeat center;
+}
+.screen__point{
+    padding: 0 0 0 112px;
+    background: url('../img/icon-point-left.png') no-repeat center;
 }
