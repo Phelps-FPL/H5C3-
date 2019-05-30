@@ -109,20 +109,24 @@
 .screen-2{
     background: #fafafa;
     height: 800px;
+    position: relative;
+    overflow: hidden;
 }
 .screen-2__heading{
     font-weight: normal;
     text-align: center;
     color: #f01400;
     padding-top: 96px;
-    font-style: 46px;
+    font-size: 46px;
+    line-height: 46px;
 }
 .screen-2__subheading{
     font-weight: normal;
     text-align: center;
-    color: #f01400;
+    color: #2c3137;
     padding-top: 25px;
-    font-style: 46px;
+    font-size: 14px;
+    line-height: 28px;
 }
 .screen-2__phone{
     width: 928px;
@@ -131,19 +135,38 @@
     position: absolute;
     left: 50%;
     margin-left: -464px;
-    bottom: 0;
+    bottom: -345px;
     z-index: 2;
 }
-.screen__point{
+.screen-2__point{
+    position: absolute;
     width: 108px;
     padding-right: 112px;
     height: 22px;
     font-size: 22px;
     line-height: 22px;
     color:#4d555d;
-    background: url('../img/icon-point-right.png') no-repeat center;
+    background: url('../img/icon-point-right.png') no-repeat center right;
 }
-.screen__point{
+.screen-2__point__custom_right{
     padding: 0 0 0 112px;
-    background: url('../img/icon-point-left.png') no-repeat center;
+    background: url('../img/icon-point-left.png') no-repeat center left;
+}
+.screen2__point_i_1{
+    top: 150px;
+    left: -164px;
+}
+.screen2__point_i_2{
+    top: 30px;
+    right: 130px;
+}
+.screen2__point_i_3{
+    top: 330px;
+    right: 30px;
+}
+/* 第三屏 */
+.screen-3{
+    background:red;
+    height: 800px;
+    position: relative;
 }
