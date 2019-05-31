@@ -312,3 +312,65 @@
 }
 /* 第五屏
  */
+.screen-5{
+    height: 800px;
+    position: relative;
+    background-color: #d9dde1;
+}
+.screen-5__bg{
+    width: 1920px;
+    height: 433px;
+    background: url('../img/bg-screen-5.png') no-repeat center;
+    position: absolute;
+    background-size: contain;
+    bottom: -100px;
+    left: 50%;
+    margin-left: -960px;
+}
+.screen-5__heading{
+    text-align: center;
+    color: #f01400;
+    padding-top: 130px;
+    font-size: 46px;
+    line-height: 46px;
+}
+.screen-5__subheading{
+    text-align: center;
+    color: #2c3137;
+    padding-top: 25px;
+    font-size: 14px;
+    line-height: 28px;
+}
+/* 第六屏 */
+.screen-buy{
+    height: 80px;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    background: #2b333b url('../img/bg-screen-buy.png') no-repeat center;
+    text-align: center;
+}
+.screen-buy__buttom{
+    height: 80px;
+    width: 240px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #f01414;
+    display: inline-block;
+    border-radius: 3px;
+    transition: all .5%
+}
+.screen-buy__buttom:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+}
+/* 底部栏 */
+.footer{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    background-color: #07111b;
+}
