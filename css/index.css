@@ -152,15 +152,15 @@
     padding: 0 0 0 112px;
     background: url('../img/icon-point-left.png') no-repeat center left;
 }
-.screen2__point_i_1{
+.screen-2__point_i_1{
     top: 150px;
     left: -164px;
 }
-.screen2__point_i_2{
+.screen-2__point_i_2{
     top: 30px;
     right: 130px;
 }
-.screen2__point_i_3{
+.screen-2__point_i_3{
     top: 330px;
     right: 30px;
 }
@@ -373,4 +373,31 @@
     color: #fff;
     font-size: 12px;
     background-color: #07111b;
+}
+.outline{
+    position: fixed;
+    padding: 5px 10px;
+    bottom: 120px;
+    right: 0;
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.5);
+}
+.outline__item{
+    display: block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 5px;
+    background-color: #fff;
+    color: #94999f;
+    border-top: 1px solid #eee;
+}
+.outline__item:first-child{
+    border: none;
+}
+.outline__item_status_active{
+    color: red;
 }
