@@ -6,7 +6,7 @@ var getAllElem = function (selector) {
     return document.querySelectorAll(selector);
   }
   //获取元素样式名称
-var grtCls = function (element) { 
+var getCls = function (element) { 
       return element.getAttribute('class');
    }
 //    设置元素样式
@@ -90,27 +90,105 @@ var setScreenAnimateInit = function (screenCls) {
 
  window.onload = function () { 
     for( k in screenAnimateElement) {
+        if(k === '.screen-1'){
+                continue;
+            }
         setScreenAnimateInit(k);
+    
+       
     }
 }
 
 // 第二步，滚动到哪里，就播放到哪里
+var navItems = getAllElem('.header__nav-item');
+var outLineItems = getAllElem('.outline__item');
+
+var switchNavItemsAcitve = function (idx) { 
+    for(var i = 0; i < navItems.length; i++){
+        delCls(navItems[i],'header__nav-item_status_active');
+    }
+    addCls(navItems[idx], 'header__nav-item_status_active');
+    for(var i = 0; i < outLineItems.length; i++){
+        delCls(outLineItems[i],'outline__item_status_active');
+    }
+    addCls(outLineItems[idx], 'outline__item_status_active');
+ }
+ switchNavItemsAcitve(0);
 window.onscroll = function () { 
     var top = document.body.scrollTop || document.documentElement.scrollTop;
-    console.log(top);
-    if(top > 1){
+    if(top > 80){
+        
+        addCls(getElem('.header'), 'header_status_back' );
+        addCls(getElem('.outline'), 'outline-status_in' );
+    }else{
+        delCls(getElem('.header'), 'header_status_back' );
+        delCls(getElem('.outline'), 'outline-status_in' );
+        switchNavItemsAcitve(0);
+    }
+    
+    if(top > 0){
         playScreenAnimateDone('.screen-1');
+        
     }
     if(top > 700 * 1){
         playScreenAnimateDone('.screen-2');
+        switchNavItemsAcitve(1);
     }
     if(top > 700 * 2){
         playScreenAnimateDone('.screen-3');
+        switchNavItemsAcitve(2);
     }
     if(top > 700 * 3){
         playScreenAnimateDone('.screen-4');
+        switchNavItemsAcitve(3);
     }
     if(top > 700 * 4){
         playScreenAnimateDone('.screen-5');
+        switchNavItemsAcitve(4);
     }
  }
+
+//  第三步,双向绑定
+
+
+var setNavJump = function (i, lib) { 
+    var item = lib[i];
+    item.onclick = function () { 
+       document.documentElement.scrollTop = i * 800;
+        
+     }
+ }
+
+for(var i = 0; i < navItems.length; i++){
+    setNavJump(i, navItems);
+    
+}
+for(var i = 0; i < outLineItems.length; i++){
+    setNavJump(i, outLineItems);
+}
+//第四步  滑动门特效
+var navTip = getElem('.header__nav-tip');
+
+var setTip = function (idx, lib) { 
+    lib[idx].onmouseover = function(){
+        navTip.style.left = (idx * 50) + 'px';
+    }
+    var acviveIdx = 0;
+    lib[idx].onmouseout = function () { 
+        for(var i = 0; i < lib.length; i++){
+            if(getCls(lib[i]).indexOf('header__nav-item_status_active') > -1){
+                acviveIdx = i;
+                break;
+            }
+        }
+        navTip.style.left = (acviveIdx * 50) + 'px';
+     }
+ }
+
+for(var i = 0; i < navItems.length; i++){
+    setTip(i,navItems);
+}
+//默认载入第一屏动画
+setTimeout(function () { 
+    playScreenAnimateDone('.screen-1');
+ },200)
